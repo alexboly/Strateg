@@ -3,16 +3,16 @@ Feature: Start game
 	I want to start a game
 	In order to play
 	
-	Scenario: No player
+	Scenario: New game has no player
 		Given A new game to configure
 		Then there's no player
 		
-	Scenario: Add computer player
+	Scenario: Game with a computer player has one player
 		Given A new game to configure
 		When I add a computer player
 		Then there's one player
 		
-	Scenario: Add human player
+	Scenario: Game with a human player has one player
 		Given A new game to configure
 		When I add a human player
 		Then there's one player
