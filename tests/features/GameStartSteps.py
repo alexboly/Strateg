@@ -1,5 +1,5 @@
 from lettuce import step
-from Game import Game
+from Game import *
 
 game = None
 
@@ -10,12 +10,6 @@ def given_a_started_game(step):
     game.addHumanPlayer()
     game.addComputerPlayer()
     game.start()
-
-def hasBase(player):
-    return True
-
-def getPeasantCount(player):
-    return 1
 
 @step(u'Then the first player has a base')
 def then_the_first_player_has_a_base(step):

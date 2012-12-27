@@ -1,3 +1,10 @@
+
+def hasBase(player):
+    return True
+
+def getPeasantCount(player):
+    return 1
+
 class Game:
     def __init__(self):
         self.humanPlayers = 0
