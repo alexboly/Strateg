@@ -22,3 +22,9 @@ Feature: Start game
 		When I add a human player
 		And I add a computer player
 		Then I can start the game
+		
+	Scenario: Can start game with two human players
+		Given A new game to configure
+		When I add a human player
+		And I add a human player
+		Then I can start the game

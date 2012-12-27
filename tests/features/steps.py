@@ -42,8 +42,12 @@ def when_i_add_a_human_player(step):
 def and_i_add_a_computer_player(step):
     when_i_add_a_computer_player(step)
     
+@step(u'And I add a human player')
+def and_i_add_a_human_player(step):
+    when_i_add_a_human_player(step)
+    
 @step(u'Then I can start the game')
 def then_i_can_start_the_game(step):
     global canStartGame
-    canStartGame = (humanPlayers == 1) and (computerPlayers == 1) and (playersCount >= 2)
+    canStartGame = (playersCount >= 2)
     assert canStartGame
