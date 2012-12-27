@@ -34,3 +34,17 @@ Feature: Start game
 		When I add a computer player
 		And I add a computer player
 		Then I can start the game
+	
+	Scenario: Cannot start game without a player
+		Given A new game to configure
+		Then I cannot start the game
+		
+	Scenario: Cannot start game with one human player
+		Given A new game to configure
+		When I add a human player
+		Then I cannot start the game
+
+	Scenario: Cannot start game with one computer player
+		Given A new game to configure
+		When I add a computer player
+		Then I cannot start the game

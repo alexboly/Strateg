@@ -35,3 +35,7 @@ def and_i_add_a_human_player(step):
 @step(u'Then I can start the game')
 def then_i_can_start_the_game(step):
     assert game.canStartGame()
+
+@step(u'Then I cannot start the game')
+def then_i_cannot_start_the_game(step):
+    assert (not game.canStartGame())
