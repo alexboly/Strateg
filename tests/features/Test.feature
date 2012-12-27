@@ -34,4 +34,3 @@ Feature: Start game
 		When I add a computer player
 		And I add a computer player
 		Then I can start the game
-	
