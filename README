@@ -1,3 +1,9 @@
 A strategy game built using ATDD.
 
 At least I will try to, since it's a pet project. I'm learning at the same time python and how to make a game, so it might not get too far.
+
+To run the game you need python.
+
+To run the acceptance tests, you will need lettuce.
+
+This project is developed in Eclipse + pyDev.
