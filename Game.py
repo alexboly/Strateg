@@ -14,3 +14,12 @@ class Game:
         
     def playersCount(self):
         return (self.humanPlayers + self.computerPlayers)
+    
+    def start(self):
+        pass
+
+    def getFirstPlayer(self):
+        return "firstPlayer"
+    
+    def getSecondPlayer(self):
+        return "secondPlayer"
