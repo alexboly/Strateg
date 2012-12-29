@@ -1,6 +1,6 @@
 Feature: Game started
 	As a gamer
-	I want to have a base after the game starts
+	I want to have a base and a peasant after the game starts
 	So that I can start building
 	
 	Scenario: The first player has a base in the beginning
