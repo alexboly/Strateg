@@ -1,8 +1,10 @@
 class Peasant:
+
+    InitialPosition = ""
     
     def __init__(self):
         self.IsSelected = False
-        self.Position = ""
+        self.Position = Peasant.InitialPosition
     
     def select(self):
         self.IsSelected = True
@@ -11,4 +13,5 @@ class Peasant:
         return self.IsSelected
 
     def move(self, position):
-        self.Position = position
+        if self.isSelected():
+            self.Position = position
