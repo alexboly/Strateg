@@ -1,9 +1,4 @@
-
-def hasBase(player):
-    return True
-
-def getPeasantCount(player):
-    return 1
+from Player import Player
 
 class Game:
     def __init__(self):
@@ -26,7 +21,7 @@ class Game:
         pass
 
     def getFirstPlayer(self):
-        return "firstPlayer"
+        return Player()
     
     def getSecondPlayer(self):
-        return "secondPlayer"
+        return Player()

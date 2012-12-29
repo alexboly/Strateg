@@ -15,30 +15,26 @@ def given_a_started_game(step):
 def then_the_first_player_has_a_base(step):
     global game
     firstPlayer = game.getFirstPlayer()
-    firstPlayerHasABase = hasBase(firstPlayer)
     
-    assert firstPlayerHasABase
+    assert firstPlayer.hasBase()
 
 @step(u'Then the second player has a base')
 def then_the_second_player_has_a_base(step):
     global game
     secondPlayer = game.getSecondPlayer()
-    secondPlayerHasABase = hasBase(secondPlayer)
     
-    assert secondPlayerHasABase
+    assert secondPlayer.hasBase()
 
 @step(u'Then the first player has a peasant')
 def then_the_first_player_has_a_peasant(step):
     global game
     firstPlayer = game.getFirstPlayer()
-    firstPlayerPeasants = getPeasantCount(firstPlayer)
     
-    assert firstPlayerPeasants == 1
+    assert firstPlayer.getPeasantCount() == 1
     
 @step(u'Then the second player has a peasant')
 def then_the_second_player_has_a_peasant(step):
     global game
     secondPlayer = game.getSecondPlayer()
-    secondPlayerPeasants = getPeasantCount(secondPlayer)
     
-    assert secondPlayerPeasants == 1
+    assert secondPlayer.getPeasantCount() == 1
