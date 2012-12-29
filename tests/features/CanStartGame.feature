@@ -1,5 +1,5 @@
 Feature: Start game
-	As a gamer
+	As a player
 	I want to start a game
 	In order to play
 	

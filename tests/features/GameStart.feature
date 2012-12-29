@@ -1,5 +1,5 @@
 Feature: Game started
-	As a gamer
+	As a player
 	I want to have a base and a peasant after the game starts
 	So that I can start building
 	
