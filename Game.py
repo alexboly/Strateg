@@ -26,7 +26,7 @@ class Game:
         self.humanPlayers += 1
         
     def playersCount(self):
-        return (self.humanPlayers + self.computerPlayers)
+        return len(self.players)
     
     def start(self):
         pass
