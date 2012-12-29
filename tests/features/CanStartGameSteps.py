@@ -1,8 +1,8 @@
 from Game import Game
 from lettuce import step
 from lettuce.registry import world
-from nose.tools import raises
 from GameCannotStartError import GameCannotStartError
+from MyAssert import assert_raises
 
 @step(u'A new game')
 def a_new_game(step):
@@ -31,10 +31,5 @@ def i_can_start_the_game(step):
 @step(u'I cannot start the game')
 def i_cannot_start_the_game(step):
     assert (not world.game.canStartGame())
-    
-    throwsException = False
-    try:
-        world.game.start()
-    except GameCannotStartError:
-        throwsException = True
-    assert throwsException
+
+    assert_raises(world.game.start, GameCannotStartError)
