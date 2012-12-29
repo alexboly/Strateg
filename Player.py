@@ -1,8 +1,12 @@
 from Peasant import Peasant
 
 class Player:
+    
+    def __init__(self):
+        self.firstPeasant = Peasant()
+    
     def getPeasant(self):
-        return Peasant()
+        return self.firstPeasant
     
     def hasBase(self):
         return True
