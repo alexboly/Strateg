@@ -1,7 +1,7 @@
-from lettuce import step
-from lettuce.registry import world
 from Position import Position, InitialPosition
 from UnitActions import UnitActions
+from lettuce import step
+from lettuce.registry import world
 
 @step(u'first peasant is selected')
 def first_peasant_is_selected(step):
