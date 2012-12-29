@@ -31,5 +31,4 @@ def i_can_start_the_game(step):
 @step(u'I cannot start the game')
 def i_cannot_start_the_game(step):
     assert (not world.game.canStartGame())
-
     assert_raises(world.game.start, GameCannotStartError)
