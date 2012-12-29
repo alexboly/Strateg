@@ -1,10 +1,10 @@
-class Peasant:
+from Position import InitialPosition
 
-    InitialPosition = ""
+class Peasant:
     
     def __init__(self):
         self.IsSelected = False
-        self.Position = Peasant.InitialPosition
+        self.Position = InitialPosition
     
     def select(self):
         self.IsSelected = True
