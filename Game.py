@@ -1,4 +1,5 @@
 from Player import Player
+from GameCannotStartError import GameCannotStartError
 
 class Game:
     def __init__(self):
@@ -25,7 +26,8 @@ class Game:
         return len(self.players)
     
     def start(self):
-        pass
+        if not self.canStartGame():
+            raise GameCannotStartError()
 
     def getFirstPlayer(self):
         return self.players[0]
