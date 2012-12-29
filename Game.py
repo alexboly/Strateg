@@ -4,6 +4,14 @@ class Game:
     def __init__(self):
         self.humanPlayers = 0
         self.computerPlayers = 0
+    
+    @staticmethod
+    def withHumanAndComputerPlayer():
+        game = Game()
+        game.addHumanPlayer()
+        game.addComputerPlayer()
+        game.start()
+        return game
         
     def canStartGame(self):
         return self.playersCount() >= 2

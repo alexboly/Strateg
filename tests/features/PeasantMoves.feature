@@ -4,5 +4,5 @@ Feature: Peasant Moves
 	So that I can interact with the map
 	
 	Scenario: The peasant can move
-		Given Another started game
+		Given A started game
 		Then I can select the first peasant
