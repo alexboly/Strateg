@@ -1,6 +1,7 @@
 from lettuce import step
 from lettuce.registry import world
 from Position import Position, InitialPosition
+from UnitActions import UnitActions
 
 @step(u'first peasant is selected')
 def first_peasant_is_selected(step):
@@ -15,7 +16,7 @@ def select_the_first_peasant(step):
 @step(u'can move the first peasant to the position "([^"]*)"')
 def can_move_the_first_peasant_to_the_position(step, position):
     expectedPosition = Position(position)
-    world.peasant.move(expectedPosition)
+    UnitActions.move(world.peasant, expectedPosition)
     
     assert world.peasant.Position == expectedPosition
     assert expectedPosition != InitialPosition
@@ -23,7 +24,7 @@ def can_move_the_first_peasant_to_the_position(step, position):
 @step(u'move the first peasant')
 def move_the_first_peasant(step):
     world.peasant = world.game.getFirstPlayer().getPeasant()
-    world.peasant.move("position")
+    UnitActions.move(world.peasant, "position")
     
 @step(u'first peasant doesn\'t move')
 def first_peasant_doesn_t_move(step):

@@ -1,7 +1,7 @@
 from Position import InitialPosition
 
 class Peasant:
-    
+
     def __init__(self):
         self.IsSelected = False
         self.Position = InitialPosition
@@ -11,7 +11,3 @@ class Peasant:
 
     def isSelected(self):
         return self.IsSelected
-
-    def move(self, position):
-        if self.isSelected():
-            self.Position = position
