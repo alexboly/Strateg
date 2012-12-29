@@ -8,17 +8,17 @@ Feature: Start game
 		Then there are zero players in the game
 		
 	Scenario: Game with a computer player has one player
-		Given A new game to configure
+		Given A new game
 		When I add a computer player
 		Then there is one player in the game
 		
 	Scenario: Game with a human player has one player
-		Given A new game to configure
+		Given A new game
 		When I add a human player
 		Then there is one player in the game
 		
 	Scenario: Can start game with one human and one computer player
-		Given A new game to configure
+		Given A new game
 		When I add a human player
 		And I add a computer player
 		Then I can start the game
@@ -30,7 +30,7 @@ Feature: Start game
 		Then I can start the game
 		
 	Scenario: Can start game with two computer players (demo)
-		Given A new game to configure
+		Given A new game
 		When I add a computer player
 		And I add a computer player
 		Then I can start the game

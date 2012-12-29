@@ -11,4 +11,4 @@ Feature: Peasant Moves
 	Scenario: Can move the peasant
 		Given A started game
 		When I select the first peasant
-		Then I can move the first peasant to the location I provide
+		Then I can move the first peasant to the position "position"
