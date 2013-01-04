@@ -6,4 +6,5 @@ from lettuce.registry import world
 def given_a_started_game(step):
     world.game = Game.withHumanAndComputerPlayer()
     world.firstPlayer = world.game.getFirstPlayer()
+    world.secondPlayer = world.game.getSecondPlayer()
     world.firstPeasantOfFirstPlayer = world.firstPlayer.getPeasant()
