@@ -1,3 +1,4 @@
+from Barracks import Barracks
 class UnitActions:
 
     @staticmethod
@@ -10,9 +11,7 @@ class UnitActions:
             unit.Position = position
     
     @classmethod
-    def buildBarracks(cls, unit, position):
+    def buildBarracks(cls, player, unit, position):
         unit.IsBuilding = True
-        #barracks = Barracks(position)
-        #player.Barracks = barracks
-        #barracks.build()
-        #unit.finishBuildingBarracks()
+        player.barracks = Barracks(position)
+        player.Barracks.build(unit)

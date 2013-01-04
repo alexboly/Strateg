@@ -6,7 +6,7 @@ from Position import Position
 @step(u'order the first peasant to build barracks')
 def order_the_first_peasant_to_build_barracks(step):
     world.peasant = world.game.getFirstPlayer().getPeasant()
-    UnitActions.buildBarracks(world.peasant, Position("barracksPosition"))
+    UnitActions.buildBarracks(world.game.getFirstPlayer(), world.peasant, Position("barracksPosition"))
 
 @step(u'first peasant starts building the barracks')
 def first_peasant_starts_building_the_barracks(step):
@@ -18,6 +18,8 @@ def first_peasant_is_not_building(step):
 
 @step(u'wait for 2 ticks')
 def wait_for_2_ticks(step):
+    #world.game.timer.tick()
+    #world.game.timer.tick()
     world.peasant.finishBuildingBarracks()
     world.game.getFirstPlayer().HasBarracks = True
     
@@ -30,10 +32,10 @@ def player_doesn_t_have_a_barracks(step):
     assert not world.game.getFirstPlayer().hasBarracks()
     
 @step(u'barracks is built at position "([^"]*)"')
-def when_the_barracks_is_built_at_position_group1(step, position):
+def barracks_is_built_at_position_position(step, position):
     world.peasant = world.game.getFirstPlayer().getPeasant()
-    UnitActions.buildBarracks(world.peasant, Position(position))
+    UnitActions.buildBarracks(world.game.getFirstPlayer(), world.peasant, position)
     
 @step(u'barracks is found at position "([^"]*)"')
-def barracks_is_found_at_position_group1(step, position):
+def barracks_is_found_at_position_position(step, position):
     assert world.game.getFirstPlayer().getBarracks().Position == position

@@ -1,6 +1,7 @@
 from Player import Player
 from GameCannotStartError import GameCannotStartError
 
+
 class Game:
     def __init__(self):
         self.players = []
