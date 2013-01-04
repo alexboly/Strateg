@@ -15,3 +15,6 @@ class Peasant:
     
     def isBuilding(self):
         return self.IsBuilding
+    
+    def finishBuildingBarracks(self):
+        self.IsBuilding = False

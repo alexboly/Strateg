@@ -12,5 +12,7 @@ class UnitActions:
     @classmethod
     def buildBarracks(cls, unit, position):
         unit.IsBuilding = True
-    
-    
+        #barracks = Barracks(position)
+        #player.Barracks = barracks
+        #barracks.build()
+        #unit.finishBuildingBarracks()
