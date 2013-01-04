@@ -1,12 +1,11 @@
 from Peasant import Peasant
-from Barracks import Barracks
 
 class Player:
     
     def __init__(self):
         self.firstPeasant = Peasant()
         self.HasBarracks = False
-        self.Barracks = Barracks("BarracksPosition")
+        self.Barracks = None
     
     def getPeasant(self):
         return self.firstPeasant
@@ -18,7 +17,7 @@ class Player:
         return 1
     
     def hasBarracks(self):
-        return self.HasBarracks
+        return self.Barracks != None
 
     def getBarracks(self):
         return self.Barracks

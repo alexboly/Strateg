@@ -11,7 +11,7 @@ class UnitActions:
             unit.Position = position
     
     @classmethod
-    def buildBarracks(cls, player, unit, position):
+    def buildBarracks(cls, game, player, unit, position):
         unit.IsBuilding = True
-        player.barracks = Barracks(position)
-        player.Barracks.build(unit)
+        player.Barracks = Barracks(unit, position)
+        game.Timer.CallOnTick = player.Barracks.advanceBuild
