@@ -3,7 +3,7 @@ from Peasant import Peasant
 class Player:
     
     def __init__(self):
-        self.firstPeasant = Peasant()
+        self.firstPeasant = Peasant(self)
         self.HasBarracks = False
         self.Barracks = None
     

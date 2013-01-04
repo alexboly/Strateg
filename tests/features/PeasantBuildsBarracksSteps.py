@@ -1,11 +1,9 @@
 from lettuce import step
 from lettuce.registry import world
-from UnitActions import UnitActions
 
 @step(u'order the first peasant to build barracks')
-
 def buildBarracksAtPosition(position):
-    return UnitActions.buildBarracks(world.game, world.firstPlayer, world.firstPeasantOfFirstPlayer, position)
+    return world.firstPeasantOfFirstPlayer.buildBarracks(world.game.Timer, position)
 
 def order_the_first_peasant_to_build_barracks(step):
     buildBarracksAtPosition("barracksPosition")

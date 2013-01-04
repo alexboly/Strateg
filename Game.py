@@ -1,7 +1,6 @@
 from Player import Player
 from GameCannotStartError import GameCannotStartError
 
-
 class GameTimer:
     
     @staticmethod
