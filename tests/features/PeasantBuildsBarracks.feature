@@ -1,4 +1,7 @@
 Feature: Peasant builds barracks
+	As a player
+	I want to build a barrack
+	So that I can build soldiers
 
 Scenario: Peasant doesn't build barracks without an order
 	Given A started game
