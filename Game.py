@@ -2,9 +2,22 @@ from Player import Player
 from GameCannotStartError import GameCannotStartError
 
 
+class GameTimer:
+    
+    @staticmethod
+    def doNothing():
+        pass
+
+    def __init__(self):
+        self.CallOnTick = GameTimer.doNothing
+    
+    def tick(self):
+        self.CallOnTick()
+
 class Game:
     def __init__(self):
         self.players = []
+        self.Timer = GameTimer()
     
     @staticmethod
     def withHumanAndComputerPlayer():
